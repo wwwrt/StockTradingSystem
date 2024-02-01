@@ -1,9 +1,9 @@
 import java.time.LocalDateTime;
 
 public class SellStock implements Order {
-    private Stock stock;
-    private int quantity;
-    private User user;
+    private final Stock stock;
+    private final int quantity;
+    private final User user;
 
     public SellStock(User user, Stock stock, int quantity) {
         this.user = user;

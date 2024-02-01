@@ -4,7 +4,7 @@ import java.util.Optional;
 
 public class StockList {
     private static StockList instance;
-    private List<Stock> stocks;
+    private final List<Stock> stocks;
 
     private StockList() {
         stocks = new ArrayList<>();

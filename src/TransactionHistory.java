@@ -3,7 +3,7 @@ import java.util.Date;
 import java.util.List;
 
 public class TransactionHistory {
-    private List<Transaction> transactions;
+    private final List<Transaction> transactions;
 
     public TransactionHistory() {
         transactions = new ArrayList<>();

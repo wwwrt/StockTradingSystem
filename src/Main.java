@@ -51,7 +51,7 @@ public class Main {
     private static void displayUserInformation(User user) {
         System.out.println("User: " + user.getUsername());
         System.out.println("Portfolio:");
-        displayPortfolio((List<Stock>) user.getPortfolio().getAllStocks()); 
+        displayPortfolio((List<Stock>) user.getPortfolio().getAllStocks());
         System.out.println("Transaction History:");
         displayTransactionHistory(user.getTransactionHistory().getTransactions());
         System.out.println();
