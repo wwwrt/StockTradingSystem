@@ -27,17 +27,17 @@ public class Main {
         User admin2 = userFactory.createUser("admin", "Admin2");
 
         // Adăugarea fondurilor în portofolii
-        user1.getPortfolio().addFunds(10000); // Adăugând 10.000 unități monetare în portofoliul lui User1
-        user2.getPortfolio().addFunds(15000); // Similar pentru User2
-        user3.getPortfolio().addFunds(20000); // Adăugând 20.000 unități monetare în portofoliul lui User3
-        admin1.getPortfolio().addFunds(30000); // Adăugând 30.000 unități monetare în portofoliul lui Admin1
-        admin2.getPortfolio().addFunds(25000); // Adăugând 25.000 unități monetare în portofoliul lui Admin2
+        user1.getPortfolio().addFunds(10000);
+        user2.getPortfolio().addFunds(15000);
+        user3.getPortfolio().addFunds(20000);
+        admin1.getPortfolio().addFunds(30000);
+        admin2.getPortfolio().addFunds(25000);
 
         // Efectuarea tranzacțiilor
-        user1.buyStock(stock1, 10); // User1 cumpără 10 acțiuni din Company A
-        user2.buyStock(stock2, 5);  // User2 cumpără 5 acțiuni din Company B
-        user3.buyStock(stock3, 7);  // User3 cumpără 7 acțiuni din Company C
-        admin1.buyStock(stock4, 4); // Admin1 cumpără 4 acțiuni din Company D
+        user1.buyStock(stock1, 10);
+        user2.buyStock(stock2, 5);
+        user3.buyStock(stock3, 7);
+        admin1.buyStock(stock4, 4);
         admin2.buyStock(stock1, 15);
 
         // Display user portfolios and transaction history
@@ -51,7 +51,7 @@ public class Main {
     private static void displayUserInformation(User user) {
         System.out.println("User: " + user.getUsername());
         System.out.println("Portfolio:");
-        displayPortfolio((List<Stock>) user.getPortfolio().getAllStocks()); // Presupunând că există o metodă getAllStocks
+        displayPortfolio((List<Stock>) user.getPortfolio().getAllStocks()); 
         System.out.println("Transaction History:");
         displayTransactionHistory(user.getTransactionHistory().getTransactions());
         System.out.println();
