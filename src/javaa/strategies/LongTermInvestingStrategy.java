@@ -1,3 +1,7 @@
+package javaa.strategies;
+
+import javaa.stock.Stock;
+
 public class LongTermInvestingStrategy implements TradingStrategy {
     @Override
     public void execute(Stock stock, int quantity) {

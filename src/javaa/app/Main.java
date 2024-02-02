@@ -1,4 +1,11 @@
-import java.time.LocalDateTime;
+package javaa.app;
+
+import javaa.stock.Stock;
+import javaa.stock.StockList;
+import javaa.transactions.Transaction;
+import javaa.users.User;
+import javaa.users.UserFactory;
+
 import java.util.List;
 
 public class Main {
@@ -19,7 +26,7 @@ public class Main {
         stockList.addStock(stock3);
         stockList.addStock(stock4);
 
-        // Create 5 users
+
         User user1 = userFactory.createUser("regular", "User1");
         User user2 = userFactory.createUser("regular", "User2");
         User user3 = userFactory.createUser("regular", "User3");
@@ -49,10 +56,10 @@ public class Main {
     }
 
     private static void displayUserInformation(User user) {
-        System.out.println("User: " + user.getUsername());
-        System.out.println("Portfolio:");
+        System.out.println("java.User: " + user.getUsername());
+        System.out.println("java.Portfolio:");
         displayPortfolio((List<Stock>) user.getPortfolio().getAllStocks());
-        System.out.println("Transaction History:");
+        System.out.println("java.Transaction History:");
         displayTransactionHistory(user.getTransactionHistory().getTransactions());
         System.out.println();
     }
@@ -73,7 +80,7 @@ public class Main {
                 System.out.println("Found a transaction with null stock.");
                 continue; // daca istoricul tranzactiilor e gol
             }
-            System.out.println("Stock: " + transaction.getStock().getName());
+            System.out.println("java.Stock: " + transaction.getStock().getName());
             System.out.println("Quantity: " + transaction.getQuantity());
             System.out.println("Price: $" + transaction.getPrice());
             System.out.println("Date: " + transaction.getDate());

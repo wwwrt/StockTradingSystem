@@ -1,3 +1,5 @@
+package javaa.users;
+
 public class UserFactory {
     public User createUser(String type, String username) {
         if (type.equalsIgnoreCase("regular")) {

@@ -1,3 +1,5 @@
+package javaa.stock;
+
 import java.util.Objects;
 
 public class Stock {
@@ -105,7 +107,7 @@ public class Stock {
 
     @Override
     public String toString() {
-        return "Stock{" +
+        return "java.Stock{" +
                 "name='" + name + '\'' +
                 ", tickerSymbol='" + tickerSymbol + '\'' +
                 ", price=" + price +

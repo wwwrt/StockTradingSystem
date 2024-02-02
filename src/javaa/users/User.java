@@ -1,3 +1,11 @@
+package javaa.users;
+
+import javaa.portfolio.Portfolio;
+import javaa.stock.Stock;
+import javaa.transactions.Transaction;
+import javaa.transactions.TransactionHistory;
+
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
@@ -37,7 +45,7 @@ public class User {
         this.transactionHistory = transactionHistory;
     }
 
-    // User-specific methods
+    // java.User-specific methods
     public void buyStock(Stock stock, int quantity) {
         if (stock == null || quantity <= 0) {
             System.out.println("Invalid buy request.");
@@ -55,8 +63,9 @@ public class User {
             portfolio.addStock(stock, quantity);
 
             // Record the transaction in the history
-            Transaction buyTransaction = new Transaction(stock, quantity, stock.getPrice(), TransactionType.BUY);
+            Transaction buyTransaction = new Transaction(stock, quantity, stock.getPrice(), LocalDateTime.now(), "BUY");
             transactionHistory.addTransaction(buyTransaction);
+
 
             System.out.println("Buy successful.");
         } else {
@@ -80,7 +89,7 @@ public class User {
             portfolio.removeStockQuantity(stock.getTickerSymbol(), quantity);
 
             // Record the transaction in the history
-            Transaction sellTransaction = new Transaction(stock, quantity, stock.getPrice(), TransactionType.SELL);
+            Transaction sellTransaction = new Transaction(stock, quantity, stock.getPrice(), LocalDateTime.now(), "SELL");
             transactionHistory.addTransaction(sellTransaction);
 
             System.out.println("Sell successful.");
@@ -92,9 +101,9 @@ public class User {
     public void viewPortfolio() {
         Map<String, Stock> stocks = (Map<String, Stock>) portfolio.getAllStocks();
         if (stocks.isEmpty()) {
-            System.out.println("Portfolio is empty.");
+            System.out.println("java.Portfolio is empty.");
         } else {
-            System.out.println("Portfolio:");
+            System.out.println("java.Portfolio:");
             for (Stock stock : stocks.values()) {
                 System.out.println("Ticker Symbol: " + stock.getTickerSymbol());
                 System.out.println("Name: " + stock.getName());

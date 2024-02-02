@@ -1,3 +1,10 @@
+package javaa.commands;
+
+import javaa.transactions.Transaction;
+import javaa.portfolio.Order;
+import javaa.stock.Stock;
+import javaa.users.User;
+
 import java.time.LocalDateTime;
 
 public class BuyStock implements Order {
@@ -13,7 +20,7 @@ public class BuyStock implements Order {
 
     @Override
     public void execute() {
-        // Check if the stock is available in sufficient quantity
+
         if (stock.getQuantity() >= quantity) {
             // Update the stock quantity
             stock.setQuantity(stock.getQuantity() - quantity);

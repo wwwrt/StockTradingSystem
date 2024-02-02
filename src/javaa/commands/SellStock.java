@@ -1,3 +1,10 @@
+package javaa.commands;
+
+import javaa.transactions.Transaction;
+import javaa.portfolio.Order;
+import javaa.stock.Stock;
+import javaa.users.User;
+
 import java.time.LocalDateTime;
 
 public class SellStock implements Order {

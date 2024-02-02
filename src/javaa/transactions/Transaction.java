@@ -1,3 +1,7 @@
+package javaa.transactions;
+
+import javaa.stock.Stock;
+
 import java.time.LocalDateTime;
 
 public class Transaction {
@@ -16,8 +20,7 @@ public class Transaction {
         this.transactionType = transactionType;
     }
 
-    public Transaction(Stock stock, int quantity, double price, TransactionType transactionType) {
-    }
+
 
     // Getters and Setters
     public Stock getStock() {
@@ -63,7 +66,7 @@ public class Transaction {
     // toString method for easy viewing of transaction details
     @Override
     public String toString() {
-        return "Transaction{" +
+        return "java.Transaction{" +
                 "stock=" + stock +
                 ", quantity=" + quantity +
                 ", price=" + price +
