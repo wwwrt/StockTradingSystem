@@ -10,3 +10,8 @@ public class UserFactory {
         return null;
     }
 }
+
+//Factory Pattern pentru crearea utilizatorilor
+//Motivație: deoarece Factory simplifică procesul de creare a utilizatorilor, și aveam nevoie de o metodă centralizată și flexibilă pentru instanțiere.
+// Utilizând pattern-ul Factory, poț adăuga ușor noi tipuri de utilizatori fără a modifica codul existent, și astfel promovând
+// principiul deschis/închis al OOP =)).

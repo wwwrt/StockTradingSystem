@@ -8,10 +8,9 @@ public class Stock {
     private double price;
     private int quantity;
     private double recentLowPrice;
-    private double fiveYearGrowthRate;  // Rata de creștere pe cinci ani
-    private double currentPERatio;      // Raportul preț/profit curent (P/E)
+    private double fiveYearGrowthRate;
+    private double currentPERatio;
 
-    // Constructor
     public Stock(String name, String tickerSymbol, double price, int quantity, double fiveYearGrowthRate, double currentPERatio) {
         this.name = name;
         this.tickerSymbol = tickerSymbol;
@@ -22,7 +21,7 @@ public class Stock {
         this.currentPERatio = currentPERatio;
     }
 
-    // Getter și Setter pentru nume
+    // nume
     public String getName() {
         return name;
     }
@@ -31,7 +30,7 @@ public class Stock {
         this.name = name;
     }
 
-    // Getter și Setter pentru simbolul bursier
+    // simbol bursier
     public String getTickerSymbol() {
         return tickerSymbol;
     }
@@ -40,7 +39,7 @@ public class Stock {
         this.tickerSymbol = tickerSymbol;
     }
 
-    // Getter și Setter pentru preț
+    // preț
     public double getPrice() {
         return price;
     }
@@ -49,7 +48,7 @@ public class Stock {
         this.price = price;
     }
 
-    // Getter și Setter pentru cantitate
+    // cantitate
     public int getQuantity() {
         return quantity;
     }
@@ -58,7 +57,7 @@ public class Stock {
         this.quantity = quantity;
     }
 
-    // Getter și Setter pentru prețul minim recent
+    // prețul minim recent
     public double getRecentLowPrice() {
         return recentLowPrice;
     }
@@ -67,7 +66,7 @@ public class Stock {
         this.recentLowPrice = recentLowPrice;
     }
 
-    // Getter și setter pentru rata de creștere pe cinci ani
+    // rata de creștere pe cinci ani
     public double getFiveYearGrowthRate() {
         return fiveYearGrowthRate;
     }
@@ -76,7 +75,7 @@ public class Stock {
         this.fiveYearGrowthRate = fiveYearGrowthRate;
     }
 
-    // Getter și setter pentru raportul preț/profit (P/E)
+    // raportul preț/profit (P/E)
     public double getCurrentPERatio() {
         return currentPERatio;
     }
@@ -85,7 +84,6 @@ public class Stock {
         this.currentPERatio = currentPERatio;
     }
 
-    // Metodele equals, hashCode și toString
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

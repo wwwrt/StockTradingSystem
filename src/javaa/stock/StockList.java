@@ -48,10 +48,20 @@ public class StockList {
     }
 
     public List<Stock> getAllStocks() {
-        return new ArrayList<>(stocks); // Returning a copy to preserve encapsulation
+        return new ArrayList<>(stocks);
     }
 
     public boolean isStockAvailable(String tickerSymbol) {
         return findStockBySymbol(tickerSymbol).isPresent();
     }
 }
+
+//am folosit Singleton Pattern
+//Motivație: deoarece Singleton asigură că există un singur punct de acces la lista de stocuri în întreaga aplicație, prevenind astfel
+//inconsistențele. Fiind un sistem de tranzacționare, știu că e foarte important să am o singură sursă de adevăr pentru stocurile disponibile,
+//evitând astfel problemele care ar putea apărea din cauza instanțelor multiple (ex. diferențe în prețuri sau cantități disponibile).
+//În plus, singleton garantează că toate componentele sistemului lucrează cu aceeași listă de stocuri, facilitând gestionarea
+// coerentă și eficientă a acestora.
+
+//am si niste elemente cheie metodei: instanța privată staticî, constructorul privat,
+//metoda publică statică pt acces (public static StockList getInstance())

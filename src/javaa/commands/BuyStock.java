@@ -22,17 +22,13 @@ public class BuyStock implements Order {
     public void execute() {
 
         if (stock.getQuantity() >= quantity) {
-            // Update the stock quantity
             stock.setQuantity(stock.getQuantity() - quantity);
 
-            // Update the user's portfolio
             user.getPortfolio().addStock(stock, quantity);
 
-            // Record the transaction
             Transaction transaction = new Transaction(stock, quantity, stock.getPrice(), LocalDateTime.now(), "BUY");
             user.getTransactionHistory().addTransaction(transaction);
         } else {
-            // Handle the case where stock is not available in sufficient quantity
             System.out.println("Insufficient stock available.");
         }
     }

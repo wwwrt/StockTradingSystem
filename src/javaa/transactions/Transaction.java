@@ -21,8 +21,6 @@ public class Transaction {
     }
 
 
-
-    // Getters and Setters
     public Stock getStock() {
         return stock;
     }
@@ -63,7 +61,7 @@ public class Transaction {
         this.transactionType = transactionType;
     }
 
-    // toString method for easy viewing of transaction details
+    // transaction details
     @Override
     public String toString() {
         return "java.Transaction{" +
